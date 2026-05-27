@@ -1,4 +1,4 @@
-# GitHub Navigator (MCP-Powered Copilot Studio Agent)
+# GitHub Navigator
 
 GitHub Navigator is an AI-powered agent built using Microsoft Copilot Studio and the GitHub Model Context Protocol (MCP).
 
@@ -19,19 +19,9 @@ It enables developers to interact with GitHub using natural language — searchi
 
 ## Architecture
 
-User
-↓
-Copilot Studio Agent (Claude Sonnet 4.6)
-↓
-MCP Client
-↓
-GitHub MCP Server
-↓
-GitHub APIs
+User → Copilot Studio Agent → MCP Client → GitHub MCP Server → GitHub APIs → Response
 
 See full architecture: [Architecture](./ARCHITECTURE.md)
-
-The agent dynamically discovers and invokes GitHub tools via MCP, enabling real-time interaction with repositories.
 
 ---
 ## Agent instructions
@@ -42,10 +32,19 @@ See agent instructions: [Agent instructions](./docs/agent-instructions.md)
 
 ## Technologies Used
 
-- Microsoft Copilot Studio
-- GitHub MCP Server
-- Claude Sonnet 4.6
-- Model Context Protocol (MCP)
+- **Microsoft Copilot Studio** — Used to design, manage, and orchestrate the conversational agent, including instructions, tool integration, and deployment.
+
+- **Model Context Protocol (MCP)** — Enables standardized integration with external tools, allowing the agent to dynamically discover and invoke GitHub capabilities.
+
+- **GitHub MCP Server** — Provides access to GitHub repositories, commits, issues, and pull requests as callable tools for real-time interaction.
+
+- **Claude Sonnet 4.6** — Serves as the primary reasoning model, handling natural language understanding, summarization, and multi-step reasoning.
+
+- **GitHub APIs** — Used indirectly through the MCP server to fetch real-time repository data and insights.
+
+- **Power Platform (Solutions & Governance)** — Used to package and manage the agent within a structured environment for lifecycle management.
+
+- **Microsoft Teams & Microsoft 365 Copilot Channels** — Used as deployment channels to make the agent accessible to end users within productivity tools.
 
 ---
 
@@ -65,19 +64,10 @@ Demo:
 
 ---
 
-## Future Improvements
-
-- Pull request automation (create / review / merge)
-- CI/CD pipeline analysis
-- Multi-step autonomous workflows
-- Integration with additional MCP servers
-
----
-
-## 📸 Screenshots
+## Screenshots
 
 
-# Agent Overview
+### Agent Overview
 ![Agent Overview](./screenshots/overview.png)
 
 ### MCP Tools Integration
@@ -85,6 +75,15 @@ Demo:
 
 ### Agent Test Panel
 ![Test Panel](./screenshots/test-panel.png)
+
+---
+
+## Future Improvements
+
+- Pull request automation (create / review / merge)
+- CI/CD pipeline analysis
+- Multi-step autonomous workflows
+- Integration with additional MCP servers
 
 ---
 
