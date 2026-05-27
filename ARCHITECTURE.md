@@ -7,6 +7,35 @@ The GitHub Navigator agent is built using Microsoft Copilot Studio and integrate
 ### Architecture Flow
 User → Copilot Studio Agent → MCP Client → GitHub MCP Server → GitHub APIs → Response
 
+### Architecture Diagram
+
+
+```mermaid
+flowchart LR
+
+    A[User Input<br/>Natural Language]
+
+    B[Copilot Studio Agent<br/>Claude Sonnet 4.6<br/>Intent + Reasoning]
+
+    C[MCP Client]
+
+    D[GitHub MCP Server<br/>Tool Provider]
+
+    E[GitHub Services<br/>Repos, Commits, Issues, PRs]
+
+    F[Processed Response<br/>Summaries, Links, Insights]
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+
+    E --> D
+    D --> C
+    C --> B
+    B --> F
+```
+
 ### Description
 
 - **User Layer**:
