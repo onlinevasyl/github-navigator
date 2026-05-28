@@ -2,10 +2,9 @@
 
 ## Table of Contents
 - [Copilot Studio Configuration](#copilot-studio-configuration)
-- [GitHub Authentication](#github-authentication)
 - [Testing & Validation](#testing--validation)
 - [Troubleshooting](#troubleshooting)
-- [Advanced Configuration](#advanced-configuration)
+- [Support & Resources](#support--resources)
 
 
 ## Copilot Studio Configuration
@@ -26,83 +25,26 @@
 11. Disable Web Search
     
 ### Step 2: Add GitHub MCP Server Tool
-The GitHub MCP connector is **built-in** to Copilot Studio and ready to use immediately!
+1. Click **Add a Tool**
+2. Choose **Model Context Protocol** to see the list of available MCP servers
+3. Find in the list and select **GitHub MCP Server**
+4. Create new connection using your GitHub credentials
+5. Click **Add and configure**
+6. Configure **Credentials to use**
+7. Enable or disable MCP tools for your purpose
+8. Save the configuration by clicking **Save** button
 
-### Step 1: Add GitHub Connector (2 minutes)
-1. Open [Microsoft Copilot Studio](https://copilotstudio.microsoft.com/)
-2. Create a new agent or open existing one
-3. Go to **Actions** → **Library** → Search for "GitHub"
-4. Click on **GitHub** connector
-5. Click **Add to agent**
-
-That's it! The connector is now available as a tool.
-
-### Step 2: Authenticate
-1. In your agent, when using the GitHub tool, you'll be prompted to authenticate
-2. Click **Sign in with GitHub** (or use existing connection)
-3. GitHub OAuth login window appears
-4. Authorize Copilot Studio to access your GitHub account
-5. Done! You're ready to use all GitHub tools
-
-## GitHub Authentication
-
-### Permissions Required
-When you authorize Copilot Studio to access GitHub, it requests:
-- Read access to repositories
-- Read access to commits, issues, and pull requests
-- Read access to user profile and organizations
-- (Optional) Write access if you enable PR/issue creation features
-
-### Connection Management
-- **View connections:** Copilot Studio → Settings → Connections
-- **Revoke access:** GitHub Settings → Apps → Authorized OAuth Apps → Revoke access to "Copilot Studio"
-- **Re-authenticate:** Simply click "Sign in with GitHub" again in the agent
-
-### Multi-Account Support
-If you have multiple GitHub accounts:
-1. The connector uses the currently authenticated GitHub user
-2. To switch accounts, revoke and re-authenticate
-3. Each Copilot Studio agent can use a different GitHub connection
-
-### Step 3: Configure Agent Instructions
-1. Go to **Agent Settings** → **Agent Instructions**
-2. Copy-paste content from [agent-instructions.md](./agent-instructions.md)
-3. Customize for your workflows and repositories
-4. Save
-
-### Step 4: Test the Agent
+### Step 3: Test the Agent
 In the **Test** panel (right side), try:
 - "Find the latest commit in onlinevasyl/github-navigator"
 - "Search for function `getUserData` in repos"
 - "Show open issues in my repositories"
 
-### Step 5: Deploy to Teams (Optional)
-1. Go **Publish**
-2. Choose deployment channel:
-   - **Microsoft Teams** - Add to Teams channels
-   - **Microsoft 365 Copilot** - Available in M365 Copilot
-   - **Web** - Shareable web link
-3. Follow channel-specific deployment steps
-
-## Available GitHub Tools
-
-Once connected, the following tools are available to your agent:
-
-| Tool | Description |
-|------|-------------|
-| `Search repositories` | Find repositories by name/topic |
-| `Get repository details` | Retrieve repo info (stars, description, etc.) |
-| `List repository files` | Browse repository structure |
-| `Search code` | Find code across repositories |
-| `List commits` | Get commit history |
-| `Get commit details` | View specific commit changes |
-| `Search commits` | Find commits by message |
-| `List issues` | Retrieve open/closed issues |
-| `Get issue details` | View issue content and comments |
-| `Search issues` | Find issues by keyword |
-| `List pull requests` | Get PRs by status |
-| `Get PR details` | View PR content and review status |
-| `Search pull requests` | Find PRs by keyword |
+### Step 4: Deploy to Teams/ M365 Copilot channels
+1. Go to **Channels**
+2. Choose Microsoft 365 and Microsoft Teams
+3. Configure all necessary details for deployment channels.
+4. Publish your agent to make it available for deployment inside Teams/ M365 Copilot or any other channel.
 
 ## Testing & Validation
 
@@ -145,16 +87,16 @@ Expected: Agent searches code and aggregates results.
 - [ ] Links in responses work and are accurate
 - [ ] Authentication persists across conversations
 - [ ] Error messages are helpful (not raw API errors)
-- [ ] Response times are acceptable (< 5 seconds typical)
+- [ ] Response times are acceptable
 
 ## Troubleshooting
 
 ### "GitHub connection not found"
 **Solution:**
-- Ensure you've clicked "Sign in with GitHub"
+- Ensure you've signed in with correct account with all necessary permissions
 - Check that OAuth window completed successfully
 - Try revoking and re-authenticating
-- Check Copilot Studio → Settings → Connections
+- Check all connections established during first test of the agent 
 
 ### "Access denied" or "Unauthorized"
 **Possible causes:**
@@ -169,7 +111,7 @@ Expected: Agent searches code and aggregates results.
 
 ### Tool returns "Repository not found"
 **Check:**
-- Repository name is correct (case-sensitive)
+- Repository name is correct
 - Repository is public or you have access
 - Repository actually exists on GitHub.com
 - Try full path: `owner/repo` format
@@ -187,9 +129,7 @@ Expected: Agent searches code and aggregates results.
 - Be patient (can take 10-30 seconds for complex searches)
 
 ### "Rate limit exceeded"
-GitHub has API rate limits:
-- Authenticated: 5,000 requests/hour
-- Unauthenticated: 60 requests/hour
+GitHub has API rate limits
 
 **Solution:**
 - Re-authenticate with GitHub (already done in Copilot Studio)
@@ -199,29 +139,11 @@ GitHub has API rate limits:
 
 ### Agent ignores GitHub tools
 **Check:**
-- GitHub connector is added to agent (see Step 2 above)
-- Agent instructions mention GitHub tools
+- GitHub MCP Server is added to agent and configured correctly (see Step 2 above)
+- Agent instructions are correct
+- Web Search is disabled
 - Test panel shows tools as available
 - Refresh browser and try again
-
-## Advanced Configuration
-
-### Customizing Agent Instructions
-
-Edit [agent-instructions.md](./agent-instructions.md) to customize:
-- Available workflows and commands
-- Response format and tone
-- Error handling approach
-- Examples and use cases
-
-**Example customization:**
-```markdown
-### Skills
-- Search repositories for vulnerabilities
-- Analyze commit patterns for code quality
-- Track issue resolution progress
-- Aggregate insights from multiple repos
-```
 
 ### Monitoring Agent Usage
 
@@ -233,17 +155,9 @@ In Copilot Studio:
    - Tools used most frequently
    - Error rates
 
-### Setting Up Team Collaboration
-
-To allow team members to use the agent:
-1. Publish agent to **Microsoft Teams**
-2. Add to team channel
-3. Team members authenticate individually with their GitHub account
-4. Each user's queries use their GitHub access
-
 ## Next Steps
 
-1. ✅ Set up agent with GitHub connector
+1. ✅ Add additional tools
 2. ✅ Test core scenarios
 3. 📋 Customize agent instructions for your team
 4. 📤 Deploy to Teams or M365 Copilot
@@ -252,7 +166,7 @@ To allow team members to use the agent:
 
 ## Support & Resources
 
-- **GitHub Connector Issues:** [Microsoft Learn - GitHub Connector](https://learn.microsoft.com/en-us/microsoftteams/platform/m365-apps/github-enterprise-integration)
+- **GitHub MCP Server Documentation:** [Microsoft Learn - Github MCP Server](https://docs.microsoft.com/connectors/github/#github-mcp-server)
 - **Copilot Studio Help:** [Microsoft Learn - Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/)
 - **GitHub API Docs:** [GitHub REST API](https://docs.github.com/en/rest)
 - **GitHub Status:** [Check API Status](https://www.githubstatus.com/)
