@@ -1,8 +1,8 @@
 # GitHub Navigator
 
-GitHub Navigator is an AI-powered agent built using Microsoft Copilot Studio and the GitHub Model Context Protocol (MCP).
+GitHub Navigator is an MCP-powered DevOps assistant built using Microsoft Copilot Studio and the GitHub Model Context Protocol (MCP).
 
-It enables developers to interact with GitHub using natural language — searching repositories, exploring code, analyzing commits, and retrieving real-time insights.
+It enables developers to interact with GitHub using natural language — searching repositories, exploring code, analyzing commits, retrieving real-time insights and taking action on developer workflows.
 
 ---
 
@@ -58,9 +58,15 @@ See agent instructions: [Agent instructions](./docs/agent-instructions.md)
 
 ---
 
-## Demo
+## Video Demo
 
-Demo:
+YouTube Video Demo
+
+---
+
+## Demo Scenarios
+
+See: [Demo](./DEMO.md)
 
 ---
 
