@@ -92,7 +92,7 @@ See: [Demo](./DEMO.md)
 ![Agent Channels](./screenshots/channels_screen.jpeg)
 
 ### Agent inside M365 Copilot
-![Agent in M365 Copilot](./screenshots/m365_copilot_screen.jpeg)
+![Agent in M365 Copilot](./screenshots/agent_in_m365_copilot.jpeg)
 ---
 
 ## Future Improvements
