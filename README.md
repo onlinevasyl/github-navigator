@@ -30,6 +30,13 @@ User → Copilot Studio Agent → MCP Client → GitHub MCP Server → GitHub AP
 See full architecture: [Architecture](./ARCHITECTURE.md)
 
 ---
+
+## Setup & Deployment Guide
+
+For setup and deployment guide see: [Setup & Deployment Guide](./docs/SETUP.md)
+
+---
+
 ## Agent instructions
 
 See agent instructions: [Agent instructions](./docs/agent-instructions.md)
