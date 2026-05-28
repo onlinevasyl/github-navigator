@@ -33,13 +33,13 @@ See full architecture: [Architecture](./ARCHITECTURE.md)
 
 ## Setup & Deployment Guide
 
-For setup and deployment guide see: [Setup & Deployment Guide](./docs/SETUP.md)
+For setup and deployment guide see: [Setup & Deployment Guide](./SETUP.md)
 
 ---
 
 ## Agent instructions
 
-See agent instructions: [Agent instructions](./docs/agent-instructions.md)
+See agent instructions: [Agent instructions](./agent-instructions.md)
 
 ---
 
