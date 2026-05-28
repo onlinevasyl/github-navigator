@@ -1,15 +1,31 @@
 # Setup & Deployment Guide
 
 ## Table of Contents
-- [Quick Start](#quick-start)
-- [GitHub Authentication](#github-authentication)
 - [Copilot Studio Configuration](#copilot-studio-configuration)
+- [GitHub Authentication](#github-authentication)
 - [Testing & Validation](#testing--validation)
 - [Troubleshooting](#troubleshooting)
 - [Advanced Configuration](#advanced-configuration)
 
-## Quick Start
 
+## Copilot Studio Configuration
+
+### Step 1: Create Agent
+1. Open [Microsoft Copilot Studio](https://copilotstudio.microsoft.com/)
+2. Click **Create blank agent**
+4. Fill in **Name:** GitHub Navigator
+5. **Language:** English (United States)
+6. Choose your **Solution** and **Schema name**
+7. Click **Create**
+8. Edit:
+   - **Agent's icon**
+   - **Description:** An MCP-powered DevOps assistant for real-time GitHub insights and workflow support.
+   - **Instructions:** See [Agent Instructions](./agent-instructions.md)
+9. **Select your agent's model:** Claude Sonnet 4.6
+10. Add **Knowledge source:** https://github.com/
+11. Disable Web Search
+    
+### Step 2: Add GitHub MCP Server Tool
 The GitHub MCP connector is **built-in** to Copilot Studio and ready to use immediately!
 
 ### Step 1: Add GitHub Connector (2 minutes)
@@ -47,23 +63,6 @@ If you have multiple GitHub accounts:
 1. The connector uses the currently authenticated GitHub user
 2. To switch accounts, revoke and re-authenticate
 3. Each Copilot Studio agent can use a different GitHub connection
-
-## Copilot Studio Configuration
-
-### Step 1: Create Agent
-1. Open [Microsoft Copilot Studio](https://copilotstudio.microsoft.com/)
-2. Click **Create** → **New Agent**
-3. Fill in:
-   - **Name:** GitHub Navigator
-   - **Description:** Natural language GitHub assistant
-   - **Instructions:** See [Agent Instructions](./agent-instructions.md)
-4. Click **Create**
-
-### Step 2: Add GitHub Connector
-1. Go to **Actions** → **Library**
-2. Search for "GitHub"
-3. Click **Add to agent**
-4. The GitHub tools are now available
 
 ### Step 3: Configure Agent Instructions
 1. Go to **Agent Settings** → **Agent Instructions**
