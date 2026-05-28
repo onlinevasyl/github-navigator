@@ -66,7 +66,7 @@ See agent instructions: [Agent instructions](./docs/agent-instructions.md)
 
 ## Video Demo
 
-YouTube Video Demo
+https://youtu.be/0oJhM8PUrh0
 
 ---
 
