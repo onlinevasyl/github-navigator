@@ -1,5 +1,11 @@
 # GitHub Navigator
 
+
+<p align="center">
+  <img src="images/Icon_for_GitHub_Navigator.png" width="500"/>
+</p>
+
+
 GitHub Navigator is an MCP-powered DevOps assistant built using Microsoft Copilot Studio and the GitHub Model Context Protocol (MCP).
 
 It enables developers to interact with GitHub using natural language — searching repositories, exploring code, analyzing commits, retrieving real-time insights and taking action on developer workflows.
