@@ -80,14 +80,19 @@ See: [Demo](./DEMO.md)
 
 
 ### Agent Overview
-![Agent Overview](./screenshots/overview.png)
+![Agent Overview 1](./screenshots/agent_overview_screen_1.jpeg)
+![Agent Overview 2](./screenshots/agent_overview_screen_2.jpeg)
 
 ### MCP Tools Integration
-![MCP Tools](./screenshots/mcp-tools.png)
+![MCP Tools 1](./screenshots/tools_screen.jpeg)
+![MCP Tools 2](./screenshots/tools_screen_2.jpeg)
+![MCP Tools 3](./screenshots/tools_screen_3.jpeg)
 
-### Agent Test Panel
-![Test Panel](./screenshots/test-panel.png)
+### Agent Channels
+![Agent Channels](./screenshots/channels_screen.jpeg)
 
+### Agent inside M365 Copilot
+![Agent in M365 Copilot](./screenshots/m365_copilot_screen.jpeg)
 ---
 
 ## Future Improvements
