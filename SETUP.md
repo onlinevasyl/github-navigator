@@ -23,7 +23,11 @@
 9. **Select your agent's model:** Claude Sonnet 4.6
 10. Add **Knowledge source:** https://github.com/
 11. Disable Web Search
-    
+
+![Agent Overview](screenshots/agent_overview_screen_1.jpeg)
+
+![Agent Overview 2](screenshots/agent_overview_screen_2.jpeg)
+
 ### Step 2: Add GitHub MCP Server Tool
 1. Click **Add a Tool**
 2. Choose **Model Context Protocol** to see the list of available MCP servers
@@ -34,17 +38,33 @@
 7. Enable or disable MCP tools for your purpose
 8. Save the configuration by clicking **Save** button
 
-### Step 3: Test the Agent
+![Agent Tools](screenshots/tools_screen.jpeg)
+
+![Agent Tools 2](screenshots/tools_screen_2.jpeg)
+
+![Agent Tools 3](screenshots/tools_screen_3.jpeg)
+
+### Step 3: User Feedback Collection
+
+Implement User Feedback Collection in agent's settings:
+1. Go to **Settings** → **Generative AI**
+2. Enable **Collect user reactions to agent messages** in **User Feedback** section
+
+![User Feedback](screenshots/user_feedback_collection.png)
+
+### Step 4: Test the Agent
 In the **Test** panel (right side), try:
 - "Find the latest commit in onlinevasyl/github-navigator"
 - "Search for function `getUserData` in repos"
 - "Show open issues in my repositories"
 
-### Step 4: Deploy to Teams/ M365 Copilot channels
+### Step 5: Deploy to Teams/ M365 Copilot channels
 1. Go to **Channels**
 2. Choose Microsoft 365 and Microsoft Teams
 3. Configure all necessary details for deployment channels.
 4. Publish your agent to make it available for deployment inside Teams/ M365 Copilot or any other channel.
+
+![Agent Deployment Channels](screenshots/channels_screen.jpeg)
 
 ## Testing & Validation
 
@@ -173,4 +193,4 @@ In Copilot Studio:
 
 ---
 
-**Pro Tip:** Bookmark the [agent-instructions.md](./agent-instructions.md) file to easily customize your agent's behavior and add new workflows over time.
+**Pro Tip:** Bookmark the [Agent Instructions](./agent-instructions.md) to easily customize your agent's behavior and add new workflows over time.
