@@ -44,7 +44,22 @@
 
 ![Agent Tools 3](screenshots/tools_screen_3.jpeg)
 
-### Step 3: User Feedback Collection
+### Step 3: Add Suggested Prompts
+
+1. Navigate to **Suggested Prompts** section
+2. Add the following prompts one by one:<p>
+Title: ```Repository Navigation```<br>
+Prompt: ```Find the latest commit in repo X```<p>
+Title: ```Search for function```<br>
+Prompt: ```Search for function calculateTotal```<p>
+Title: ```Issue Tracking```<br>
+Prompt: ```Show open issues in repo Y```<p>
+Title: ```Code Insights```<br>
+Prompt: ```Explain recent changes```<p>
+
+4. Save your changes  
+
+### Step 4: User Feedback Collection
 
 Implement User Feedback Collection in agent's settings:
 1. Go to **Settings** → **Generative AI**
@@ -52,13 +67,13 @@ Implement User Feedback Collection in agent's settings:
 
 ![User Feedback](screenshots/user_feedback_collection.png)
 
-### Step 4: Test the Agent
+### Step 5: Test the Agent
 In the **Test** panel (right side), try:
 - "Find the latest commit in onlinevasyl/github-navigator"
 - "Search for function `getUserData` in repos"
 - "Show open issues in my repositories"
 
-### Step 5: Deploy to Teams/ M365 Copilot channels
+### Step 6: Deploy to Teams/ M365 Copilot channels
 1. Go to **Channels**
 2. Choose Microsoft 365 and Microsoft Teams
 3. Configure all necessary details for deployment channels.
