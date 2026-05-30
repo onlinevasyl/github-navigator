@@ -19,7 +19,7 @@
 8. Edit:
    - **Agent's icon**
    - **Description:** An MCP-powered DevOps assistant for real-time GitHub insights and workflow support.
-   - **Instructions:** See [Agent Instructions](./agent-instructions.md)
+   - **Instructions:** See [Agent Instructions](./AGENT-INSTRUCTIONS.md)
 9. **Select your agent's model:** Claude Sonnet 4.6
 10. Add **Knowledge source:** https://github.com/
 11. Disable Web Search
@@ -193,4 +193,4 @@ In Copilot Studio:
 
 ---
 
-**Pro Tip:** Bookmark the [Agent Instructions](./agent-instructions.md) to easily customize your agent's behavior and add new workflows over time.
+**Pro Tip:** Bookmark the [Agent Instructions](./AGENT-INSTRUCTIONS.md) to easily customize your agent's behavior and add new workflows over time.
