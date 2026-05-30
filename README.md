@@ -39,7 +39,7 @@ For setup and deployment guide see: [Setup & Deployment Guide](./SETUP.md)
 
 ## Agent instructions
 
-See agent instructions: [Agent instructions](./agent-instructions.md)
+See agent instructions: [Agent instructions](./AGENT-INSTRUCTIONS.md)
 
 ---
 
